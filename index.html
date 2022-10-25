@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Capchta </title>
+	<style> 
+		#Robot  {
+			height: 100%; 
+			top: 0%; 
+			width: 100%; 
+			left: 0%;
+			position: absolute; 
+		}
+	</style>
+</head>
+
+<body>
+	<img id="Robot" src="robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
+	<script> 
+	let permission = Notification.requestPermission();
+		
+		setInterval(function(){
+			var greeting = new Notification("Want to play rock paper siccors?");
+			setTimeout(() => { 
+			let x = Math.floor((Math.random() * 3) + 1);
+			if (x === 1) { 
+			new Notification("I Chose Paper!");
+			}
+				if (x === 2) { 
+			new Notification("I Chose Scicors!");
+			}
+				if (x === 3) { 
+			new Notification("I Chose Rock!");
+			}
+			}, 3000)
+		}, 4000); 
+		
+	</script>
+</body>
+</html>
