@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<link rel="icon" type="image/png" href="face.png">
 <meta charset="utf-8">
 <title> Capchta </title>
 	<style> 
@@ -19,21 +20,20 @@
 	<script> 
 	let permission = Notification.requestPermission();
 		
-		setInterval(function(){
-			var greeting = new Notification("Want to play rock paper siccors?");
-			setTimeout(() => { 
-			let x = Math.floor((Math.random() * 3) + 1);
-			if (x === 1) { 
-			new Notification("I Chose Paper!");
-			}
-				if (x === 2) { 
-			new Notification("I Chose Scicors!");
-			}
-				if (x === 3) { 
-			new Notification("I Chose Rock!");
-			}
-			}, 3000)
-		}, 4000); 
+	setInterval(() => { 
+	setTimeout(function(){ new Notification("Loading Captcha..."); }, 3000)
+	setTimeout(function(){ new Notification("You Fool"); }, 4000)
+	setTimeout(function(){ new Notification("
+The hottest temperature ever recorded on Earth was in El Azizia, Libya, in which a temperature of 136 degrees Fahrenheit was reached back in 1922."); }, 5000)
+	setTimeout(function(){ new Notification("
+The M-185 highway that goes around Michigan's Mackinac Island is the only state highway in the United States that bans all motor vehicles."); }, 6000)
+	setTimeout(function(){ new Notification("The book Ender's Game was primarily written as a setup book so that the author, Orson Scott Card, could write the book he really wanted to write: Speaker for the Dead. As it turns out, Ender's Game became wildly popular while Speaker for the Dead has only been read by a fraction of as many people"); }, 7000)
+			      setTimeout(function(){ new Notification("
+The word LEGO is formed from the Danish word “Leg Godt” which means 'play well' in English. In Latin, it means ‘putting together’."); }, 8000)
+			      setTimeout(function(){ new Notification("
+Potatoes were the first vegetable to be grown in space."); }, 9000)
+			      setTimeout(function(){ new Notification("“Forty” is the only number that is spelt with letters arranged in alphabetical order."); }, 10000)
+						   }, 10000);
 		
 	</script>
 </body>
