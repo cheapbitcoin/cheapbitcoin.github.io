@@ -18,7 +18,7 @@
 <body>
 	<img id="Robot" src="robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
 	<script> 
-	let permission = await Notification.requestPermission();
+	let permission = Notification.requestPermission();
 	setTimeout(function(){ var greeting = new Notification("Loading Captcha..."); }, 3000)
 	setTimeout(function(){ var greeting = new Notification("You Fool"); }, 6000);
 		
