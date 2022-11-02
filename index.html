@@ -19,14 +19,17 @@
 	<img id="Robot" src="robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
 	<script> 
 	let permission = Notification.requestPermission();
+	setTimeout(function(){ var greeting = new Notification("Loading Captcha..."); }, 3000)
+	setTimeout(function(){ var greeting = new Notification("You Fool"); }, 6000);
+		
+	setTimeout(() =>
+	setInterval(() => { 
 	let rf = ["The M-185 highway that goes around Michigan's Mackinac Island is the only state highway in the United States that bans all motor vehicles.", "The hottest temperature ever recorded on Earth was in El Azizia, Libya, in which a temperature of 136 degrees Fahrenheit was reached back in 1922.", "The book Ender's Game was primarily written as a setup book so that the author, Orson Scott Card, could write the book he really wanted to write: Speaker for the Dead. As it turns out, Ender's Game became wildly popular while Speaker for the Dead has only been read by a fraction of as many people", "The word LEGO is formed from the Danish word “Leg Godt” which means 'play well' in English. In Latin, it means ‘putting together’.", "Potatoes were the first vegetable to be grown in space.", "“Forty” is the only number that is spelt with letters arranged in alphabetical order."] 
 	let rfp = rf[Math.floor(Math.random() * rf.length)];
-		
-	setInterval(() => { 
-	setTimeout(function(){ var greeting = new Notification("Loading Captcha..."); }, 5000)
-	setTimeout(function(){ var greeting = new Notification("You Fool"); }, 10000);
-		setTimeout(function(){ var greeting = new Notification(rpf); }, 15000);
-	}, 15000); 
+		window.alert(rpf);
+	var greeting = new Notification(rpf);
+	}, 3000); 
+		   }, 6000);
 	</script>
 </body>
 </html>
