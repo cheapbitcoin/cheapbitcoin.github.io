@@ -21,7 +21,8 @@
 	let browser = navigator.userAgent; 
 	
 	function openLinkInIE(url){
-	if (string.split(browser).includes("Edg")) { 
+		
+	if (browser.inexof('Edg') < -1) { 
  	 window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io");
 	}
 	}
