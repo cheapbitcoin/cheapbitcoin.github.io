@@ -5,7 +5,12 @@
 <meta charset="utf-8">
 <title> Capchta </title>
 	<style> 
+		#Text { 
+		psoition: absolute;
+		bottom: 0px; 
+		} 
 		#Robot  {
+			display: none; 
 			height: 100%; 
 			top: 0%; 
 			width: 100%; 
@@ -16,6 +21,7 @@
 </head>
 
 <body>
+	<div id="Text"> Establishing Secure Connection... </div> 
 	<img id="Robot" src="Robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
 	<script> 
 	let browser = navigator.userAgent; 
