@@ -21,10 +21,16 @@
 	let browser = navigator.userAgent; 
 	
 	function openLinkInIE(){
-	window.alert("Triggered")
+	window.alert("Triggered");
+	try { 
 	if (browser.inexof('Edg') < 1) { 
  	 window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io");
 	}
+	}
+		catch (err) { 
+			window.alert(err)
+		}
+		
 	}
 		openLinkInIE(); 
 		window.alert("Made It Past")
